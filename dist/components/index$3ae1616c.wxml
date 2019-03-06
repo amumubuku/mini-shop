@@ -1,0 +1,16 @@
+<template name="index$3ae1616c">
+  <view class="_div data-v-fa6f770a topic">
+    <view class="_ul data-v-fa6f770a list">
+      <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{topicList}}" wx:for-index="index" wx:for-item="item" class="_li data-v-fa6f770a">
+        <view class="_div data-v-fa6f770a t-img">
+          <image src="{{item.scene_pic_url}}" alt class="_img data-v-fa6f770a"></image>
+        </view>
+        <view class="_div data-v-fa6f770a info">
+          <view class="_p data-v-fa6f770a">{{item.title}}</view>
+          <view class="_p data-v-fa6f770a">{{item.subtitle}}</view>
+          <view class="_p data-v-fa6f770a">{{item.price_info}}元起</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

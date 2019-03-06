@@ -1,0 +1,30 @@
+<template name="index$0e8d9e31">
+  <view class="_div data-v-619928c0 address">
+    <scroll-view scroll-y="{{scrollflag}}" class="_scroll-view data-v-619928c0 addcont" style="height: 100%;">
+      <view wx:if="{{listData.length!=0}}" class="_div data-v-619928c0 item">
+        <view class="_div data-v-619928c0 list" bindtouchstart="handleProxy" data-index="{{index}}" bindtouchmove="handleProxy" bindtouchend="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}" wx:for="{{listData}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-619928c0 addresslist" style=" {{item.textStyle}}">
+            <view class="_div data-v-619928c0"><label class="_span data-v-619928c0">{{item.name}}</label>
+              <view wx:if="{{item.is_default}}" class="_div data-v-619928c0 moren"> 默认 </view>
+            </view>
+            <view class="_div data-v-619928c0 info">
+              <view class="_p data-v-619928c0">{{item.mobile}}</view>
+              <view class="_p data-v-619928c0">{{item.address+item.address_detail}}</view>
+            </view>
+            <view bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" class="_div data-v-619928c0"></view>
+          </view>
+          <view bindtap="handleProxy" class="_div data-v-619928c0 delete" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}" style=" {{item.textStyle1}}">
+            <view class="_div data-v-619928c0"> 删除 </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else class="_div data-v-619928c0 center">
+        <view class="_p data-v-619928c0">收货地址在哪里?</view>
+      </view>
+    </scroll-view>
+    <view class="_div data-v-619928c0 bottom">
+      <view bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_div data-v-619928c0">+新建地址</view>
+      <view bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_div data-v-619928c0">一键导入微信地址</view>
+    </view>
+  </view>
+</template>

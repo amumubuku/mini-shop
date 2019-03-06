@@ -1,0 +1,71 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/addaddress/main",
+    "pages/address/main",
+    "pages/addressSelect/main",
+    "pages/branddetail/main",
+    "pages/brandlist/main",
+    "pages/cart/main",
+    "pages/category/main",
+    "pages/categorylist/main",
+    "pages/collectlist/main",
+    "pages/counter/main",
+    "pages/feedback/main",
+    "pages/goods/main",
+    "pages/login/main",
+    "pages/logs/main",
+    "pages/mappage/main",
+    "pages/my/main",
+    "pages/newgoods/main",
+    "pages/order/main",
+    "pages/practice/main",
+    "pages/search/main",
+    "pages/topic/main",
+    "pages/topicdetail/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "优选",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/main",
+        "iconPath": "static/images/ic_menu_choice_nor.png",
+        "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/topic/main",
+        "iconPath": "static/images/ic_menu_topic_nor.png",
+        "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
+        "text": "专题"
+      },
+      {
+        "pagePath": "pages/category/main",
+        "iconPath": "static/images/ic_menu_sort_nor.png",
+        "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/main",
+        "iconPath": "static/images/ic_menu_shoping_nor.png",
+        "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/main",
+        "iconPath": "static/images/ic_menu_me_nor.png",
+        "selectedIconPath": "static/images/ic_menu_me_pressed.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

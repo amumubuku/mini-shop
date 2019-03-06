@@ -1,0 +1,52 @@
+<template name="index$4ed631a7">
+  <view class="_div data-v-3f1639f2 search">
+    <view class="_div data-v-3f1639f2 head">
+      <view class="_div data-v-3f1639f2">
+        <image src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/search2-2fb94833aa.png" alt class="_img data-v-3f1639f2"></image> <input type="text" confirm-type="search" focus="true" value="{{words}}" bindinput="handleProxy" bindfocus="handleProxy" bindconfirm="handleProxy" placeholder="商品搜索" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-3f1639f2" />
+        <image bindtap="handleProxy" class="_img data-v-3f1639f2 del" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/clearIpt-f71b83e3c2.png" alt data-eventid="{{'1'}}" data-comkey="{{$k}}"></image>
+      </view>
+      <view bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_div data-v-3f1639f2">取消</view>
+    </view>
+    <view class="_div data-v-3f1639f2 searchtips" wx:if="{{words}}">
+      <view bindtap="handleProxy" wx:if="{{tipsData.length!=0}}" data-value="{{item.name}}" wx:key="index" key="{{index}}" data-eventid="{{'3-'+index}}" data-comkey="{{$k}}" wx:for="{{tipsData}}" wx:for-index="index" wx:for-item="item" class="_div data-v-3f1639f2">
+        {{ item.name }}
+      </view>
+      <view wx:if="{{tipsData.length==0}}" class="_div data-v-3f1639f2 nogoods"> 数据库暂无此类商品... </view>
+    </view>
+    <view class="_div data-v-3f1639f2 history" wx:if="{{historyData.length!=0}}">
+      <view class="_div data-v-3f1639f2 t">
+        <view class="_div data-v-3f1639f2">历史记录</view>
+        <view bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_div data-v-3f1639f2"></view>
+      </view>
+      <view class="_div data-v-3f1639f2 cont">
+        <view bindtap="handleProxy" data-value="{{item.keyword}}" wx:key="index" key="{{index}}" data-eventid="{{'5-'+index}}" data-comkey="{{$k}}" wx:for="{{historyData}}" wx:for-index="index" wx:for-item="item" class="_div data-v-3f1639f2">
+          {{item.keyword}}
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-3f1639f2 history hotsearch">
+      <view class="_div data-v-3f1639f2 t">
+        <view class="_div data-v-3f1639f2">热门搜索</view>
+      </view>
+      <view class="_div data-v-3f1639f2 cont">
+        <view bindtap="handleProxy" data-value="{{item.keyword}}" wx:key="index" key="{{index}}" data-eventid="{{'6-'+index}}" data-comkey="{{$k}}" wx:for="{{hotData}}" wx:for-index="index" wx:for-item="item" class="_div data-v-3f1639f2 {{[0 == index ? 'active' : '']}}">
+          {{item.keyword}}
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{listData.length!=0}}" class="_div data-v-3f1639f2 goodsList">
+      <view class="_div data-v-3f1639f2 sortnav">
+        <view bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_div data-v-3f1639f2 {{[0 == nowIndex ? 'active' : '']}}">综合</view>
+        <view bindtap="handleProxy" class="_div data-v-3f1639f2 price {{[1 == nowIndex ? 'active' : '', order == 'desc' ? 'desc' : 'asc']}}" data-eventid="{{'8'}}" data-comkey="{{$k}}">价格</view>
+        <view bindtap="handleProxy" data-eventid="{{'9'}}" data-comkey="{{$k}}" class="_div data-v-3f1639f2 {{[2 == nowIndex ? 'active' : '']}}">分类</view>
+      </view>
+      <view class="_div data-v-3f1639f2 sortlist">
+        <view bindtap="handleProxy" wx:key="index" key="{{index}}" class="_div data-v-3f1639f2 item {{[listData.length % 2 == 0 ? 'active' : 'none']}}" data-eventid="{{'10-'+index}}" data-comkey="{{$k}}" wx:for="{{listData}}" wx:for-index="index" wx:for-item="item">
+          <image src="{{item.list_pic_url}}" alt class="_img data-v-3f1639f2"></image>
+          <view class="_p data-v-3f1639f2 name">{{item.name}}</view>
+          <view class="_p data-v-3f1639f2 price">￥{{item.retail_price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

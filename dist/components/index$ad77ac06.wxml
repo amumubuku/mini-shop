@@ -1,0 +1,14 @@
+<import src="wxParse$4d57200d" /><template name="index$ad77ac06">
+  <view class="_div data-v-3b2538e8 topicdetail">
+    <view class="_div data-v-3b2538e8 content">
+      <view wx:if="{{goods_desc}}" class="_div data-v-3b2538e8 detail"><template data="{{...$root[$kk+'0'], $root}}" is="wxParse$4d57200d"></template></view>
+    </view>
+    <view class="_div data-v-3b2538e8 list">
+      <view class="_p data-v-3b2538e8 title">专题推荐</view>
+      <view wx:key="index" key="{{index}}" class="_div data-v-3b2538e8 item" wx:for="{{recommendList}}" wx:for-index="index" wx:for-item="item">
+        <image src="{{item.scene_pic_url}}" alt class="_img data-v-3b2538e8"></image>
+        <view class="_p data-v-3b2538e8">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+</template>

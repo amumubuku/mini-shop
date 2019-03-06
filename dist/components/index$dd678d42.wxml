@@ -1,0 +1,43 @@
+<template name="index$dd678d42">
+  <view class="_div data-v-4fa3d92a cart">
+    <view class="_div data-v-4fa3d92a top">
+      <view class="_div data-v-4fa3d92a">30天无忧退货</view>
+      <view class="_div data-v-4fa3d92a">48小时快速退款</view>
+      <view class="_div data-v-4fa3d92a">满88元免邮费</view>
+    </view>
+    <view class="_div data-v-4fa3d92a cartlist">
+      <view class="_div data-v-4fa3d92a item" bindtouchstart="handleProxy" bindtouchmove="handleProxy" bindtouchend="handleProxy" data-index="{{index}}" wx:key="index" key="{{index}}" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}" wx:for="{{listData}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-4fa3d92a con" style=" {{item.textStyle}}">
+          <view class="_div data-v-4fa3d92a left">
+            <view class="_div data-v-4fa3d92a icon {{[Listids[index] ? 'active' : '', [allcheck ? 'active' : '']]}}" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}"></view>
+            <view class="_div data-v-4fa3d92a img">
+              <image src="{{item.list_pic_url}}" alt class="_img data-v-4fa3d92a"></image>
+            </view>
+            <view class="_div data-v-4fa3d92a info">
+              <view class="_p data-v-4fa3d92a">{{item.goods_name}}</view>
+              <view class="_p data-v-4fa3d92a">￥{{item.retail_price}}</view>
+            </view>
+          </view>
+          <view class="_div data-v-4fa3d92a right">
+            <view class="_div data-v-4fa3d92a num"> x{{item.number}}
+            </view>
+          </view>
+        </view>
+        <view bindtap="handleProxy" class="_div data-v-4fa3d92a delete" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}" style=" {{item.textStyle1}}">
+          <view class="_div data-v-4fa3d92a"> 删除 </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{false}}" class="_div data-v-4fa3d92a nogoods">
+      <image src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/noCart-a8fe3f12e5.png" alt class="_img data-v-4fa3d92a"></image>
+    </view>
+    <view class="_div data-v-4fa3d92a fixed">
+      <view bindtap="handleProxy" class="_div data-v-4fa3d92a left {{[allcheck ? 'active' : '']}}" data-eventid="{{'3'}}" data-comkey="{{$k}}"> 全选({{isCheckedNumber}}) </view>
+      <view class="_div data-v-4fa3d92a right">
+        <view class="_div data-v-4fa3d92a"> ￥{{allPrise}}
+        </view>
+        <view bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_div data-v-4fa3d92a">下单</view>
+      </view>
+    </view>
+  </view>
+</template>

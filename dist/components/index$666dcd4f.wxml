@@ -1,0 +1,112 @@
+<template name="index$666dcd4f">
+  <view class="_div data-v-a3569f44 index">
+    <view class="_div data-v-a3569f44 search">
+      <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-a3569f44">{{cityName}}</view>
+      <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_div data-v-a3569f44"><input type="text" placeholder="搜索商品" class="_input data-v-a3569f44" /> <label class="_span data-v-a3569f44 icon"></label></view>
+    </view>
+    <view class="_div data-v-a3569f44 swiper">
+      <swiper class="_swiper data-v-a3569f44 swiper-container" indicator-dots="true" autoplay="true" interval="3000" circular="true" duration="500">
+        <block wx:key="index" key="{{index}}" wx:for="{{banner}}" wx:for-index="index" wx:for-item="item">
+          <swiper-item class="_swiper-item data-v-a3569f44 swiper-item">
+            <image src="{{item.image_url}}" class="_image data-v-a3569f44 slide-image"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="_div data-v-a3569f44 channel">
+      <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}" wx:for="{{channel}}" wx:for-index="index" wx:for-item="item" class="_div data-v-a3569f44">
+        <image src="{{item.icon_url}}" alt class="_img data-v-a3569f44"></image>
+        <view class="_p data-v-a3569f44">{{item.name}}</view>
+      </view>
+    </view>
+    <view class="_div data-v-a3569f44 brand">
+      <view bindtap="handleProxy" class="_div data-v-a3569f44 head" data-eventid="{{'3'}}" data-comkey="{{$k}}"> 品牌制造商直供 </view>
+      <view class="_div data-v-a3569f44 content">
+        <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'4-'+index}}" data-comkey="{{$k}}" wx:for="{{brandList}}" wx:for-index="index" wx:for-item="item" class="_div data-v-a3569f44">
+          <view class="_div data-v-a3569f44">
+            <view class="_p data-v-a3569f44">{{item.name}}</view>
+            <view class="_p data-v-a3569f44">{{item.floor_price}}元起</view>
+          </view>
+          <image src="{{item.new_pic_url}}" alt class="_img data-v-a3569f44"></image>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-a3569f44 newgoods">
+      <view bindtap="handleProxy" class="_div data-v-a3569f44 newgoods-top" data-eventid="{{'5'}}" data-comkey="{{$k}}">
+        <view class="_div data-v-a3569f44 top">
+          <view class="_p data-v-a3569f44">新品首发</view>
+          <view class="_p data-v-a3569f44">查看全部</view>
+        </view>
+      </view>
+      <view class="_div data-v-a3569f44 list">
+        <view class="_ul data-v-a3569f44">
+          <scroll-view class="_scroll-view data-v-a3569f44 scroll-view" scroll-x="{{true}}">
+            <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'6-'+index}}" data-comkey="{{$k}}" wx:for="{{newGoods}}" wx:for-index="index" wx:for-item="item" class="_li data-v-a3569f44">
+              <image src="{{item.list_pic_url}}" alt class="_img data-v-a3569f44"></image>
+              <view class="_p data-v-a3569f44">{{item.name}}</view>
+              <view class="_p data-v-a3569f44">{{item.goods_brief}}</view>
+              <view class="_p data-v-a3569f44">￥{{item.retail_price}}</view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-a3569f44 newgoods hotgoods">
+      <view bindtap="handleProxy" class="_div data-v-a3569f44 newgoods-top" data-eventid="{{'7'}}" data-comkey="{{$k}}">
+        <view class="_div data-v-a3569f44 top">
+          <view class="_p data-v-a3569f44">人气推荐 <label class="_span data-v-a3569f44"></label> 好物精选</view>
+          <view class="_p data-v-a3569f44">查看全部</view>
+        </view>
+      </view>
+      <view class="_div data-v-a3569f44 list">
+        <view class="_ul data-v-a3569f44">
+          <scroll-view class="_scroll-view data-v-a3569f44 scroll-view" scroll-x="{{true}}">
+            <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'8-'+index}}" data-comkey="{{$k}}" wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" class="_li data-v-a3569f44">
+              <image src="{{item.list_pic_url}}" alt class="_img data-v-a3569f44"></image>
+              <view class="_p data-v-a3569f44">{{item.name}}</view>
+              <view class="_p data-v-a3569f44">{{item.goods_brief}}</view>
+              <view class="_p data-v-a3569f44">￥{{item.retail_price}}</view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-a3569f44 topicList">
+      <view bindtap="handleProxy" class="_div data-v-a3569f44 topicList-top" data-eventid="{{'9'}}" data-comkey="{{$k}}"> 专题精选 <label class="_span data-v-a3569f44 icon"></label></view>
+      <view class="_div data-v-a3569f44 list">
+        <view class="_ul data-v-a3569f44">
+          <scroll-view class="_scroll-view data-v-a3569f44 scroll-view" scroll-x="{{true}}">
+            <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'10-'+index}}" data-comkey="{{$k}}" wx:for="{{topicList}}" wx:for-index="index" wx:for-item="item" class="_li data-v-a3569f44">
+              <image src="{{item.item_pic_url}}" alt class="_img data-v-a3569f44"></image>
+              <view class="_div data-v-a3569f44 btom">
+                <view class="_div data-v-a3569f44">
+                  <view class="_p data-v-a3569f44">{{item.title}}</view>
+                  <view class="_p data-v-a3569f44">{{item.subtitle}}</view>
+                </view>
+                <view class="_div data-v-a3569f44">
+                  {{item.price_info}}元起 </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-a3569f44 newcategory">
+      <view class="_div data-v-a3569f44 list" wx:key="index" key="{{index}}" wx:for="{{newCategoryList}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-a3569f44 head">{{item.name}}好物</view>
+        <view class="_div data-v-a3569f44 sublist">
+          <view bindtap="handleProxy" wx:key="subindex" key="{{subindex}}" data-eventid="{{'11-'+index+'-'+subindex}}" data-comkey="{{$k}}" wx:for="{{item.goodsList}}" wx:for-index="subindex" wx:for-item="subitem" class="_div data-v-a3569f44">
+            <image src="{{subitem.list_pic_url}}" alt class="_img data-v-a3569f44"></image>
+            <view class="_p data-v-a3569f44">{{subitem.name}}</view>
+            <view class="_p data-v-a3569f44">￥{{subitem.retail_price}}</view>
+          </view>
+          <view bindtap="handleProxy" data-eventid="{{'12-'+index}}" data-comkey="{{$k}}" class="_div data-v-a3569f44">
+            <view class="_div data-v-a3569f44 last">
+              <view class="_p data-v-a3569f44">{{item.name}}好物</view> <label class="_span data-v-a3569f44 icon"></label>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

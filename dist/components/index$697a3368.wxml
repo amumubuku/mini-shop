@@ -1,0 +1,13 @@
+<template name="index$697a3368">
+  <view class="_div data-v-86f48412 mappage">
+    <view class="_div data-v-86f48412 section"><input bindinput="handleProxy" placeholder="搜索" value="{{keywords}}" focus="true" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-86f48412" /></view>
+    <scroll-view scroll-y="{{true}}" class="_scroll-view data-v-86f48412 addcont" style="height: 500rpx;">
+      <view class="_div data-v-86f48412 result" bindtouchstart="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}" wx:for="{{tips}}" wx:for-index="index" wx:for-item="item">
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <view class="_div data-v-86f48412 map_container">
+      <view class="_div data-v-86f48412 title"> 显示当前位置: </view> <map class="_map data-v-86f48412 map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}"></map>
+    </view>
+  </view>
+</template>

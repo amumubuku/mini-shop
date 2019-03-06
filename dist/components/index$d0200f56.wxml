@@ -1,0 +1,17 @@
+<template name="index$d0200f56">
+  <view class="_div data-v-5dcd9c38 branddetail">
+    <view class="_div data-v-5dcd9c38 banner">
+      <image src="http://yanxuan.nosdn.127.net/1541445967645114dd75f6b0edc4762d.png" alt class="_img data-v-5dcd9c38"></image>
+      <view class="_div data-v-5dcd9c38 info"><label class="_span data-v-5dcd9c38">MUJI制造商</label></view>
+    </view>
+    <view class="_div data-v-5dcd9c38 info-desc"> 严选精选了MUJI制造商和生产原料， 用几乎零利润的价格，剔除品牌溢价， 让用户享受原品牌的品质生活。 </view>
+    <view wx:if="{{goodsList.length!=0}}" class="_div data-v-5dcd9c38 sortlist">
+      <view wx:key="index" key="{{index}}" class="_div data-v-5dcd9c38 item" wx:for="{{goodsList}}" wx:for-index="index" wx:for-item="item">
+        <image src="{{item.list_pic_url}}" alt class="_img data-v-5dcd9c38"></image>
+        <view class="_p data-v-5dcd9c38 name">{{item.name}}</view>
+        <view class="_p data-v-5dcd9c38 price">￥{{item.retail_price}}</view>
+      </view>
+    </view>
+    <view wx:else class="_div data-v-5dcd9c38 none"> 数据库暂无数据... </view>
+  </view>
+</template>

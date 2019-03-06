@@ -1,0 +1,15 @@
+<template name="index$3cc2852b">
+  <view class="_div data-v-1d9cc714 my">
+    <view class="_div data-v-1d9cc714 myinfo">
+      <image bindtap="handleProxy" src="{{avator}}" alt data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_img data-v-1d9cc714"></image>
+      <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_div data-v-1d9cc714">
+        <view class="_p data-v-1d9cc714">{{userInfo.nickName}}</view>
+        <view wx:if="{{userInfo.nickname}}" class="_p data-v-1d9cc714">点击登录</view>
+        <view wx:else class="_p data-v-1d9cc714">微信用户</view>
+      </view>
+    </view>
+    <view class="_div data-v-1d9cc714 iconlist">
+      <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}" wx:for="{{listData}}" wx:for-index="index" wx:for-item="item" class="_div data-v-1d9cc714"><label class="_span data-v-1d9cc714 iconfont {{item.icon}}"></label> <label class="_span data-v-1d9cc714">{{item.title}}</label></view>
+    </view>
+  </view>
+</template>

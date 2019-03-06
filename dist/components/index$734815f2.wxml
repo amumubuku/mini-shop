@@ -1,0 +1,16 @@
+<template name="index$734815f2">
+  <view class="_div data-v-7b788f3d addaddress">
+    <view class="_div data-v-7b788f3d item"><input type="text" placeholder="姓名" value="{{userName}}" bindinput="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-7b788f3d" /></view>
+    <view class="_div data-v-7b788f3d item"><input type="text" placeholder="手机号码" value="{{telNumber}}" bindinput="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_input data-v-7b788f3d" /></view>
+    <view class="_div data-v-7b788f3d item">
+      <picker mode="region" bindchange="handleProxy" value="{{region}}" custom-item="{{customItem}}" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_picker data-v-7b788f3d"><input type="text" placeholder="身份、城市、区县" value="{{address}}" bindinput="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_input data-v-7b788f3d" /></picker>
+    </view>
+    <view class="_div data-v-7b788f3d item"><input type="text" placeholder="详细地址，如楼道、楼盘号等" value="{{detailadress}}" bindinput="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_input data-v-7b788f3d" /></view>
+    <view class="_div data-v-7b788f3d item itemend">
+      <checkbox-group bindchange="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_checkbox-group data-v-7b788f3d"><label class="_label data-v-7b788f3d checkbox">
+          <checkbox class="_checkbox data-v-7b788f3d box" value="true" checked="{{checked}}" color="#B4282D" />设置为默认地址 </label></checkbox-group>
+      <view bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_div data-v-7b788f3d">一键导入微信></view>
+    </view>
+    <view bindtap="handleProxy" class="_div data-v-7b788f3d bottom" data-eventid="{{'7'}}" data-comkey="{{$k}}"> 保存 </view>
+  </view>
+</template>

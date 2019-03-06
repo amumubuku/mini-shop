@@ -1,0 +1,8 @@
+<template name="index$26126f04">
+  <view class="_div data-v-6fc2bfcf feedback">
+    <view class="_div data-v-6fc2bfcf title"> 意见与反馈 </view>
+    <view class="_div data-v-6fc2bfcf cont"><textarea class="_textarea data-v-6fc2bfcf text" max="150" name value="{{content}}" bindinput="handleProxy" placeholder="请填写你的意见和反馈" data-eventid="{{'0'}}" data-comkey="{{$k}}" /> <label class="_span data-v-6fc2bfcf">{{content.length}}/150</label></view> <view class="_div data-v-6fc2bfcf connect"><label for class="_label data-v-6fc2bfcf">
+      联系方式:
+    </label> <input type="text" value="{{phone}}" bindinput="handleProxy" placeholder="邮箱/手机号/微信号" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_input data-v-6fc2bfcf" /></view> <view bindtap="handleProxy" class="_div data-v-6fc2bfcf bottom" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+    提交
+  </view></view></template>

@@ -1,0 +1,12 @@
+<template name="index$47050685">
+  <view class="_div data-v-ffa37fd8 collection">
+    <view class="_div data-v-ffa37fd8 title"> 我的收藏 </view>
+    <view class="_div data-v-ffa37fd8 sublist">
+      <view bindtap="handleProxy" wx:key="subindex" key="{{subindex}}" data-eventid="{{'0-'+subindex}}" data-comkey="{{$k}}" wx:for="{{collectlist}}" wx:for-index="subindex" wx:for-item="subitem" class="_div data-v-ffa37fd8">
+        <image src="{{subitem.list_pic_url}}" alt class="_img data-v-ffa37fd8"></image>
+        <view class="_p data-v-ffa37fd8">{{subitem.name}}</view>
+        <view class="_p data-v-ffa37fd8">￥{{subitem.retail_price}}</view>
+      </view>
+    </view>
+  </view>
+</template>

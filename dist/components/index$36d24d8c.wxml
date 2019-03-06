@@ -1,0 +1,20 @@
+<import src="card$7d9c2a16" /><template name="index$36d24d8c">
+  <view class="_div data-v-2e472a05 container" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}">
+    <view class="_div data-v-2e472a05 userinfo" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+      <image class="_img data-v-2e472a05 userinfo-avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="_div data-v-2e472a05 userinfo-nickname"><template data="{{...$root[$kk+'0'], $root}}" is="card$7d9c2a16"></template></view>
+    </view>
+    <view class="_div data-v-2e472a05 picture">
+      <view class="_div data-v-2e472a05 btn"><button type="primary" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_button data-v-2e472a05">跳转页面</button></view>
+    </view>
+    <view class="_div data-v-2e472a05 picture">
+      <view class="_h3 data-v-2e472a05">图片api相关1</view>
+      <view class="_div data-v-2e472a05 btn"><button type="primary" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_button data-v-2e472a05">选择图片</button> <button type="primary" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_button data-v-2e472a05">预览图片</button> <button type="primary" class="_button data-v-2e472a05">图片信息</button></view>
+      <image wx:if="{{imgUrl}}" src="{{imgUrl}}" alt class="_img data-v-2e472a05"></image>
+    </view>
+    <view class="_div data-v-2e472a05 picture">
+      <view class="_h3 data-v-2e472a05">弹窗相关</view>
+      <view class="_div data-v-2e472a05 btn"><button type="primary" bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_button data-v-2e472a05">showToast</button> <button type="primary" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_button data-v-2e472a05">showLoading</button> <button type="primary" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_button data-v-2e472a05">showModal</button></view> <button style="width:50%;margin-top:10rpx;" type="primary" open-type="share" class="_button data-v-2e472a05">分享</button>
+    </view>
+  </view>
+</template>

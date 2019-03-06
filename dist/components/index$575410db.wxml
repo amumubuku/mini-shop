@@ -1,0 +1,21 @@
+<template name="index$575410db">
+  <view class="_div data-v-7e9c92a6 categoryList">
+    <scroll-view scroll-x="true" scroll-left="{{scrollLeft}}" class="_scroll-view data-v-7e9c92a6 head">
+      <view bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{navData}}" wx:for-index="index" wx:for-item="item" class="_div data-v-7e9c92a6 {{[nowIndex == index ? 'active' : '']}}">
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <view class="_div data-v-7e9c92a6 info">
+      <view class="_p data-v-7e9c92a6">{{currentNav.name}}</view>
+      <view class="_p data-v-7e9c92a6">{{currentNav.front_desc}}</view>
+    </view>
+    <view class="_div data-v-7e9c92a6 list" wx:if="{{goodsList.length!=0}}">
+      <view bindtap="handleProxy" class="_div data-v-7e9c92a6 item" wx:key="index" key="{{index}}" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}" wx:for="{{goodsList}}" wx:for-index="index" wx:for-item="item">
+        <image src="{{item.list_pic_url}}" alt class="_img data-v-7e9c92a6"></image>
+        <view class="_p data-v-7e9c92a6 name">{{item.name}}</view>
+        <view class="_p data-v-7e9c92a6 price">￥{{item.retail_price}}</view>
+      </view>
+    </view>
+    <view wx:else class="_div data-v-7e9c92a6 none"> 数据库暂无数据... </view>
+  </view>
+</template>

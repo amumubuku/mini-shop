@@ -3,21 +3,21 @@
 //   getOpenid
 // } from './utils'
 export default {
-  created() {
+  created () {
     // 调用API从本地缓存中获取数据
     const logs = wx.getStorageSync("logs") || [];
     logs.unshift(Date.now());
     wx.setStorageSync("logs", logs);
     var userInfo = {
-      openId: "oQmbb4sNZdxaUQZ0sfYgvtOP2S7c",
-      nickName: "何玉硕",
+      openId: "Aa8upqjU3JdyXtedwyOO1BoMjs7FgDWp",
+      nickName: "周维光",
       gender: 1,
       language: "zh_CN",
-      city: "Changping",
-      province: "Beijing",
+      city: "GuiYang",
+      province: "GuiZhou",
       country: "China",
-      avatarUrl: "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIbWFEIJj8IpGeHM7dGic1aTFZALjWcMm9ltWfFiaQfVRYticWBfgGfzXWMt2EkJWiaicPtftHAlWxUibxQ/132",
-      watermark: { timestamp: 1535513485, appid: "wx601ce71bde7b9add" }
+      avatarUrl: "http://www.qqzi.net/uploads/allimg/1112/0S331M14-23.jpg",
+      watermark: { timestamp: 1535513485, appid: "wxb1596037adf18f4f" }
     };
     var openId = userInfo.openId;
     wx.setStorageSync("userInfo", userInfo);

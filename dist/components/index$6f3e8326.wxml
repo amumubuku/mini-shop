@@ -1,0 +1,5 @@
+<template name="index$6f3e8326">
+  <view class="_div data-v-91b53396 login">
+    <view class="_div data-v-91b53396 logo"></view> <button class="_button data-v-91b53396 login-btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">微信登录</button>
+  </view>
+</template>

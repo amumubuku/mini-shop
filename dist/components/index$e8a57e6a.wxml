@@ -1,0 +1,59 @@
+<template name="index$e8a57e6a">
+  <view class="_div data-v-58d7b84c order">
+    <view bindtap="handleProxy" wx:if="{{address.name}}" class="_div data-v-58d7b84c address" data-eventid="{{'1'}}" data-comkey="{{$k}}">
+      <view class="_div data-v-58d7b84c item">
+        <view class="_div data-v-58d7b84c list">
+          <view class="_div data-v-58d7b84c addresslist">
+            <view class="_div data-v-58d7b84c"><label class="_span data-v-58d7b84c">{{address.name}}</label>
+              <view wx:if="{{address.is_default}}" class="_div data-v-58d7b84c moren"> 默认 </view>
+            </view>
+            <view class="_div data-v-58d7b84c info">
+              <view class="_p data-v-58d7b84c">{{address.mobile}}</view>
+              <view class="_p data-v-58d7b84c">{{address.address+address.address_detail}}</view>
+            </view>
+            <view class="_div data-v-58d7b84c"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view bindtap="handleProxy" wx:else class="_div data-v-58d7b84c seladdress" data-eventid="{{'0'}}" data-comkey="{{$k}}"> 请选择收货地址 </view>
+    <view class="_div data-v-58d7b84c orderbox">
+      <view class="_div data-v-58d7b84c item">
+        <view class="_div data-v-58d7b84c">商品合计</view>
+        <view class="_div data-v-58d7b84c">￥{{allprice}}</view>
+      </view>
+      <view class="_div data-v-58d7b84c item">
+        <view class="_div data-v-58d7b84c">运费</view>
+        <view class="_div data-v-58d7b84c">免运费</view>
+      </view>
+      <view class="_div data-v-58d7b84c item">
+        <view class="_div data-v-58d7b84c">优惠券</view>
+        <view class="_div data-v-58d7b84c">暂无</view>
+      </view>
+    </view>
+    <view class="_div data-v-58d7b84c cartlist">
+      <view class="_div data-v-58d7b84c item" wx:key="index" key="{{index}}" wx:for="{{listData}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-58d7b84c con">
+          <view class="_div data-v-58d7b84c left">
+            <view class="_div data-v-58d7b84c img">
+              <image src="{{item.list_pic_url}}" alt class="_img data-v-58d7b84c"></image>
+            </view>
+            <view class="_div data-v-58d7b84c info">
+              <view class="_p data-v-58d7b84c">{{item.goods_name}}</view>
+              <view class="_p data-v-58d7b84c">￥{{item.retail_price}}</view>
+            </view>
+          </view>
+          <view class="_div data-v-58d7b84c right">
+            <view class="_div data-v-58d7b84c num"> x{{item.number}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-58d7b84c bottom">
+      <view class="_div data-v-58d7b84c"> 实付 : ￥{{allprice}}
+      </view>
+      <view bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_div data-v-58d7b84c"> 支付 </view>
+    </view>
+  </view>
+</template>

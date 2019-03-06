@@ -1,0 +1,19 @@
+<template name="index$66ba2bf5">
+  <view class="_div data-v-9f2b0680 newgoods">
+    <view class="_div data-v-9f2b0680 banner">
+      <image src="http://yanxuan.nosdn.127.net/8976116db321744084774643a933c5ce.png" alt class="_img data-v-9f2b0680"></image>
+    </view>
+    <view class="_div data-v-9f2b0680 sortnav">
+      <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_div data-v-9f2b0680 {{[0 == nowIndex ? 'active' : '']}}">综合</view>
+      <view bindtap="handleProxy" class="_div data-v-9f2b0680 price {{[1 == nowIndex ? 'active' : '', order == 'desc' ? 'desc' : 'asc']}}" data-eventid="{{'1'}}" data-comkey="{{$k}}">价格</view>
+      <view bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_div data-v-9f2b0680 {{[2 == nowIndex ? 'active' : '']}}">分类</view>
+    </view>
+    <view class="_div data-v-9f2b0680 sortlist">
+      <view bindtap="handleProxy" wx:key="index" key="{{index}}" class="_div data-v-9f2b0680 item" data-eventid="{{'3-'+index}}" data-comkey="{{$k}}" wx:for="{{listData}}" wx:for-index="index" wx:for-item="item">
+        <image src="{{item.list_pic_url}}" alt class="_img data-v-9f2b0680"></image>
+        <view class="_p data-v-9f2b0680 name">{{item.name}}</view>
+        <view class="_p data-v-9f2b0680 price">￥{{item.retail_price}}</view>
+      </view>
+    </view>
+  </view>
+</template>

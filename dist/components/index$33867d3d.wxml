@@ -1,0 +1,25 @@
+<template name="index$33867d3d">
+  <view class="_div data-v-7d36ce08 category">
+    <view class="_div data-v-7d36ce08 search" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+      <view class="_div data-v-7d36ce08 ser"><label class="_span data-v-7d36ce08 icon"></label> <label class="_span data-v-7d36ce08">商品搜索,共239款好物</label></view>
+    </view>
+    <view class="_div data-v-7d36ce08 content">
+      <scroll-view class="_scroll-view data-v-7d36ce08 left" scroll-y="true">
+        <view class="_div data-v-7d36ce08 iconText {{[index == nowIndex ? 'active' : '']}}" bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}" wx:for="{{listData}}" wx:for-index="index" wx:for-item="item">
+          {{item.name}}
+        </view>
+      </scroll-view>
+      <scroll-view class="_scroll-view data-v-7d36ce08 right" scroll-y="true">
+        <view class="_div data-v-7d36ce08 banner">
+          <image src="{{detailData.banner_url}}" alt class="_img data-v-7d36ce08"></image>
+        </view>
+        <view class="_div data-v-7d36ce08 title"><label class="_span data-v-7d36ce08">—</label> <label class="_span data-v-7d36ce08">{{detailData.name}}分类</label> <label class="_span data-v-7d36ce08">—</label></view>
+        <view class="_div data-v-7d36ce08 bottom">
+          <view bindtap="handleProxy" wx:key="index" key="{{index}}" class="_div data-v-7d36ce08 item" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}" wx:for="{{detailData.subList}}" wx:for-index="index" wx:for-item="item">
+            <image src="{{item.wap_banner_url}}" alt class="_img data-v-7d36ce08"></image> <label class="_span data-v-7d36ce08">{{item.name}}</label>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>
